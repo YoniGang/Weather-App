@@ -7,9 +7,9 @@ const geocode = (address, callback) => {
         if (err) {
             callback('Unable to connect geolocation service!', undefined)
         } else if (features == undefined || features.length < 1) {
-            callback('Unable to find location. Try another search,', undefined)
+            callback('Unable to find location. Try another search.', undefined)
         } else  {
-            const { center, place_name: location  } = features[0]
+            const { center, place_name: location } = features[0]
             callback(undefined, {
                 latitude: center[1], 
                 longitude: center[0], 
